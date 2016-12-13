@@ -10,29 +10,30 @@ import React, {PropTypes, Component} from 'react';
    constructor(props) {
      super(props);
  
-     this.state = {
-       people: []
-     };
+     // this.state = {
+     //   people: []
+     // };
    }
  
    render() {
      const {people} = this.props;
      console.log('this.props',this.props)
      console.log('yoo',{people})
+     console.log('actions',this.props.addPerson)
  
      return (
        <div>
-         <PersonInput addPerson={this.props.actions.addPerson} />
+         <PersonInput addPerson={this.props.addPerson} />
          <PeopleList people={people} />
        </div>
      );
    }
  }
  
- PeopleContainer.propTypes = {
-   people: PropTypes.array.isRequired,
-   actions: PropTypes.object.isRequired
- };
+ // PeopleContainer.propTypes = {
+ //   people: PropTypes.array.isRequired,
+ //   actions: PropTypes.object.isRequired
+ // };
  
  function mapStateToProps(state, props) {
    return {
@@ -41,9 +42,9 @@ import React, {PropTypes, Component} from 'react';
  }
  
  function mapDispatchToProps(dispatch) {
-   return {
-     actions: bindActionCreators(peopleActions, dispatch)
-   }
+   return  bindActionCreators({ ...peopleActions
+
+   }, dispatch) 
  }
  
  export default connect(mapStateToProps, mapDispatchToProps)(PeopleContainer);

@@ -3,6 +3,7 @@
  import Person from './Person';
  
  const PeopleList = ({people}) => {
+ 	console.log('peopleList',people)
    return (
      <div>
        {people.map((person) => 
@@ -12,8 +13,8 @@
    );
  };
  
- PeopleList.propTypes = {
-   people: PropTypes.array.isRequired
- };
+ // PeopleList.propTypes = {
+ //   people: PropTypes.array.isRequired
+ // };
  
  export default PeopleList;

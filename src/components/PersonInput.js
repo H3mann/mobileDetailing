@@ -18,7 +18,7 @@ import React, {PropTypes, Component} from 'react';
  
      firstNameElement.value = "";
      lastNameElement.value = "";
-     
+     console.log('hello')
  
      firstNameElement.focus();
    }
