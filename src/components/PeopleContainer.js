@@ -4,7 +4,7 @@ import React, {PropTypes, Component} from 'react';
  import * as peopleActions from '../actions/people-actions';
  import PeopleList from './PeopleList';
  import PersonInput from './PersonInput';
- import App from '../../src/App'
+ import App from '../App'
  
  class PeopleContainer extends Component {
    constructor(props) {
@@ -17,9 +17,9 @@ import React, {PropTypes, Component} from 'react';
  
    render() {
      const {people} = this.props;
-     console.log('this.props',this.props)
-     console.log('yoo',{people})
-     console.log('actions',this.props.addPerson)
+     // console.log('this.props',this.props)
+     // console.log('yoo',{people})
+     // console.log('actions',this.props.addPerson)
  
      return (
        <div>

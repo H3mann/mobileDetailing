@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import PeopleContainer from './components/PeopleContainer';
+import UserInputContainer from './components1/UserInputContainer'
 
 class App extends Component {
   render() {
