@@ -50,7 +50,7 @@ handleSubmit(e) {
 e.preventDefault()
 console.log('hello')
 this.props.postInfo(this.state.car,this.state.colour,this.state.location,this.state.time)
-browserHistory.push('/test');
+
 },
 
 
