@@ -11,12 +11,15 @@ import * as types from './action-types';
 import { browserHistory } from 'react-router';
 
 export function postInfo(car,colour,location,time) {
-	var stringifiedInfo = JSON.stringify(car)
-	console.log('hello!!! inside postinfo', stringifiedInfo)
+	var car = car
+	console.log('hello!!! inside postinfo', car,colour,location,time)
 	return function (dispatch) {
 console.log('yo')
 		axios.post('api/carInput', {
-		car: stringifiedInfo
+		car: car,
+		colour: colour,
+		location: location,
+		time: time
 		})
 		.then(response => {
 		console.log('postInfo response',response.data)
