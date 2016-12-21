@@ -6,7 +6,7 @@ import React, {PropTypes, Component} from 'react';
  import { browserHistory } from 'react-router';
  // import PeopleList from './PeopleList';
  // import PersonInput from './PersonInput';
-
+ import Main from '../components/Main'
  import UserInput from '../components/UserInput'
 
 const UserInputContainer = React.createClass({
@@ -109,7 +109,7 @@ submit={this.handleSubmit} />
    }, dispatch) 
  }
  
- export default connect(mapStateToProps, mapDispatchToProps)(UserInputContainer);
+ export default connect(mapStateToProps, mapDispatchToProps)(Main);
 
 
 
