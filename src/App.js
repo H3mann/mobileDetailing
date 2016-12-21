@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 // import PeopleContainer from './components/PeopleContainer';
+import Signup from './components/Authorization/Signup'
 import UserInputContainer from './containers/UserInputContainer'
+
 
 class App extends Component {
   render() {
@@ -16,6 +18,9 @@ class App extends Component {
           To get started, input your info below!
         </p>
         <UserInputContainer />
+          <div className='signup'>
+            <Signup />
+          </div>
       </div>
     );
   }

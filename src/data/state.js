@@ -5,6 +5,7 @@ const carInfo = {
 	location: 'Toronto',
 	time: '5pm'
 
+
 }
 
 export default carInfo

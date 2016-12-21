@@ -2,6 +2,7 @@ import React, {PropTypes, Component} from 'react';
  import {connect} from 'react-redux';
  import {bindActionCreators} from 'redux';
  import * as peopleActions from '../actions/people-actions';
+ import * as userActions from '../actions/userActions'
  import { browserHistory } from 'react-router';
  // import PeopleList from './PeopleList';
  // import PersonInput from './PersonInput';
@@ -94,14 +95,16 @@ submit={this.handleSubmit} />
  
  function mapStateToProps(state) {
    return {
-     carInfo: state.carInfo
+     carInfo: state.carInfo,
+     auth: state.auth
 
 
    };
  }
  
  function mapDispatchToProps(dispatch) {
-   return  bindActionCreators({ ...peopleActions
+   return  bindActionCreators({ ...peopleActions,
+    ...userActions
 
    }, dispatch) 
  }
