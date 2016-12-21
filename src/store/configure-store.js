@@ -1,4 +1,4 @@
-import rootReducer from '../reducers';
+import rootReducer from '../reducers/index';
  import {createStore, applyMiddleware} from 'redux';
  import carInfo from '../data/state'
  import thunk from 'redux-thunk';
@@ -7,11 +7,12 @@ import rootReducer from '../reducers';
 
  const defaultState = {
  	
- 	authReducer
+ 	auth
+ 	
  }
  
  
-  const store = createStore(rootReducer,defaultState,applyMiddleware(thunk));
+  const store = createStore(authReducer,defaultState,applyMiddleware(thunk));
 
   export default store;
  

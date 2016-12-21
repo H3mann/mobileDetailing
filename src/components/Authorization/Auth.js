@@ -1,23 +1,22 @@
 import React, { Component } from 'react';
 import { browserHistory } from 'react-router';
 
-import LogIn from './Login'
-import SignUp from './SignUp'
+import Login from './Login'
+import Signup from './Signup'
 
 const Auth = React.createClass({
 
   componentWillMount() {
-    this.props.isUserAuth(true);
+    // this.props.isUserAuth(true);
+    console.log('okayy!')
   },
 
   render() {
     return (
       <div className='auth noSelect'>
-        {
-          this.props.game.login ?
-          <LogIn login={this.props.login} logSuccess={this.props.game.logSuccess} logReset={this.props.logReset}/> :
-          <SignUp signup={this.props.signup} logSuccess={this.props.game.usernameSuccess} userReset={this.props.userReset}/>
-        }
+
+          <Signup signup={this.props.signup} logSuccess={this.props.auth.usernameSuccess} userReset={this.props.userReset}/>
+
       </div>
     )
   }

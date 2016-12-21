@@ -2,28 +2,32 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 // import PeopleContainer from './components/PeopleContainer';
-import Signup from './components/Authorization/Signup'
-import UserInputContainer from './containers/UserInputContainer'
+
+import Main from '../src/components/Main'
+
+ import {connect} from 'react-redux';
+ import {bindActionCreators} from 'redux';
+ import * as peopleActions from '../src/actions/people-actions';
+ import * as userActions from '../src/actions/userActions'
+ import { browserHistory } from 'react-router';
 
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>GB Auto Detail</h2>
-        </div>
-        <p className="App-intro">
-          To get started, input your info below!
-        </p>
-        <UserInputContainer />
-          <div className='signup'>
-            <Signup />
-          </div>
-      </div>
-    );
-  }
-}
 
-export default App;
+
+function mapStateToProps(state) {
+   return {
+     carInfo: state.carInfo,
+     auth: state.auth
+   };
+ }
+ 
+ function mapDispatchToProps(dispatch) {
+   return  bindActionCreators({ ...peopleActions,
+    ...userActions
+
+   }, dispatch) 
+ }
+ 
+ const App = connect(mapStateToProps, mapDispatchToProps)(Main);
+
+export default App

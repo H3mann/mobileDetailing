@@ -7,16 +7,21 @@ import store from '../store/configure-store'
 import { Provider } from 'react-redux';
 import App from '../../src/App'
 import UserInputContainer from '../containers/UserInputContainer'
-import Auth from '../components/Authorization/Auth'
+import Auth from '../components/authorization/Auth'
+import Main from '../components/Main'
+import Signup from '../components/authorization/Signup'
+
 
 var routes = (
 <Provider store={store}>
 	<Router history={browserHistory}>
 		<Route path='/' component={App}>
-		<IndexRoute component={Auth}></IndexRoute>
-		</Route>
-		<Route path='/test' component={Test} />
+		<IndexRoute component={UserInputContainer} />
+		
 		<Route path='/input' component={UserInputContainer} />
+		<Route path='/signup' component={Signup} />
+		
+		</Route>
 		
 
 	</Router>
@@ -24,3 +29,4 @@ var routes = (
 )
 
  module.exports = routes
+		// <IndexRoute component={App}></IndexRoute>

@@ -1,68 +1,72 @@
 import React from 'react'
 import { Button, FormGroup, ControlLabel, FormControl, Form, HelpBlock, Col, PageHeader } from 'react-bootstrap';
 
-class Signup extends React.Component {
+const Signup = React.createClass ({
 
-	constructor (props) {
-		super(props) 
+	getInitialState() {
 
-		this.state = {
+		return {
 			name: '',
 			pass: '',
 			pass2: '',
 			clicked: false
-		}
-	}
+    }
+		
+	},
 
 	componentWillMount() {
     this.setState({clicked: false});
     // this.props.userReset();
-  }
+    console.log('PROPS',this.props)
+  },
 
 	updateName(event) {
+    
 		this.setState({
 			name: event.target.value
 		})
-	}
+    console.log('updatename',event.target.value)
+	},
 
 	updatePass(event) {
 		this.setState({
 			pass: event.target.value
 		})
-	}
+    console.log('updatename',event.target.value)
+	},
 
 	updatePass2(event) {
     this.setState({pass2: event.target.value});
-  }
+  },
 
   getValidationUsername() {
     const length = this.state.name.length;
     if (length > 0) return 'success';
     else if (length > 20) return 'warning';
     else if (length <= 0) return 'error';
-  }
+  },
 
   getValidationPassword() {
     const length = this.state.pass.length;
     if (length > 0) return 'success';
     else if (length > 20) return 'warning';
     else if (length <= 0) return 'error';
-  }
+  },
 
   getValidationPassword2() {
     return (this.state.pass !== '' && this.state.pass === this.state.pass2) ? 'success' : 'error';
-  }
+  },
 
   allValid() {
     return !(this.getValidationUsername() === 'success'
       && this.getValidationPassword() === 'success'
       && this.getValidationPassword2() === 'success');
-  }
+  },
 
   handleSubmit(e) {
     e.preventDefault();
     this.props.signup(this.state.name, this.state.pass);
-  }
+  },
 
 
 	render() {
@@ -150,6 +154,6 @@ class Signup extends React.Component {
     )
   }
 
-}
+})
 
 export default Signup

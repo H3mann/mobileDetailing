@@ -9,9 +9,11 @@
   },
   "dependencies": {
     "axios": "^0.15.3",
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.15.2",
     "cors": "^2.8.1",
     "express": "^4.14.0",
+    "express-jwt": "^5.1.0",
     "express-session": "^1.14.2",
     "neo4j": "^2.0.0-RC2",
     "neo4j-driver": "^1.0.5",

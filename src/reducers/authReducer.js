@@ -1,28 +1,47 @@
 
 
 
-function authReducer (state =[],action) {
+const authReducer = (state = [] ,action) => {
 
-	//state = JSON.parse(JSON.stringify(state))
+	// let newState = JSON.parse(JSON.stringify(state))
+	// console.log('new state',newState)
 
 	switch (action.type) {
 		case 'USER_LOGIN':
-		state.logged = true
-		return state;
+		return {...state,logged: true}
+
 
 		case 'USER_LOGOUT':
-		state.logged = false
-		return state;
+		return {...state, logged: false}
 
 		case 'USERNAME_SUCCESS':
-		state.usernameSuccess = action.usernameSuccess
-		return state;
+		// let newState = JSON.parse(JSON.stringify(state))
+		return {...state, usernameSuccess: action.usernameSuccess}
+		
+		//same as :  state.usernameSuccess = action.usernameSuccess
+		
+
 
 		default:
-      state.usernameSuccess = !state.usernameSuccess;
+      
       return state;
 
 	}
 }
 
 export default authReducer
+
+// const fetching = (state = { isFetching: false }, action) => {
+//   switch (action.type) {
+//     case 'REQUESTING':
+//       const newState = JSON.parse(JSON.stringify(state));
+//       newState.isFetching = true;
+//       return newState;
+//     case 'RECEIVE_POKEMON_TYPE_INFO':
+//       const newState = JSON.parse(JSON.stringify(state));
+//       newState.isFetching = false;
+//       return newState;
+//     default:
+//       return state
+//   }
+// }

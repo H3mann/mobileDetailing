@@ -7,6 +7,6 @@
    authReducer,
    routing: routerReducer
  });
- console.log('ROOT',rootReducer)
+ console.log('ROOT',this)
  
  export default rootReducer;

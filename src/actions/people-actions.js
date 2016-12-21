@@ -11,7 +11,7 @@ import * as types from './action-types';
 import { browserHistory } from 'react-router';
 
 export function postInfo(car,colour,location,time) {
-	var car = car
+	
 	console.log('hello!!! inside postinfo', car,colour,location,time)
 	return function (dispatch) {
 console.log('yo')

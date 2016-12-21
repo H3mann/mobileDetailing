@@ -71,10 +71,6 @@ location={this.state.location}
 time={this.state.time}
 submit={this.handleSubmit} />
 
-
-
-
-
 </div>
 
 )
@@ -86,6 +82,7 @@ submit={this.handleSubmit} />
 
 })
 
+export default UserInputContainer
 
  
  // PeopleContainer.propTypes = {
@@ -93,23 +90,23 @@ submit={this.handleSubmit} />
  //   actions: PropTypes.object.isRequired
  // };
  
- function mapStateToProps(state) {
-   return {
-     carInfo: state.carInfo,
-     auth: state.auth
+//  function mapStateToProps(state) {
+//    return {
+//      carInfo: state.carInfo,
+//      auth: state.auth
 
 
-   };
- }
+//    };
+//  }
  
- function mapDispatchToProps(dispatch) {
-   return  bindActionCreators({ ...peopleActions,
-    ...userActions
+//  function mapDispatchToProps(dispatch) {
+//    return  bindActionCreators({ ...peopleActions,
+//     ...userActions
 
-   }, dispatch) 
- }
+//    }, dispatch) 
+//  }
  
- export default connect(mapStateToProps, mapDispatchToProps)(Main);
+//  const App1 = connect(mapStateToProps, mapDispatchToProps)(Main);
 
-
+// export default App1
 
