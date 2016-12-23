@@ -19,8 +19,10 @@ export function login(name, pass) {
 				} else {
 					dispatch({
 						type: "GET_INPUTDATA",
-						inputData: JSON.parse('inputData in get request',res.data)
+						inputData: res.data
 					})
+					browserHistory.push('/')
+
 					
 				}
 			})

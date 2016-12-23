@@ -43,7 +43,8 @@ db.cypher({
     res.sendStatus(400)
   }
   if(results[0]) {
-    console.log('THESE ARE RESULTS[0]',results[0])
+    console.log('THESE ARE RESULTS[0]',results)
+    res.send(results[0])
   }
 })
 }
