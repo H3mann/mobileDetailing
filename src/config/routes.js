@@ -10,6 +10,7 @@ import UserInputContainer from '../containers/UserInputContainer'
 import Auth from '../components/authorization/Auth'
 import Main from '../components/Main'
 import Signup from '../components/authorization/Signup'
+import Login from '../components/authorization/Login'
 
 
 var routes = (
@@ -19,7 +20,8 @@ var routes = (
 		<IndexRoute component={UserInputContainer} />
 		
 		<Route path='/input' component={UserInputContainer} />
-		<Route path='/signup' component={Signup} />
+		<Route path='/signup1' component={Signup} />
+		<Route path='/login' component={Login} />
 		
 		</Route>
 		
