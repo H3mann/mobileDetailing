@@ -14,12 +14,12 @@ export function postInfo(car,colour,location,time) {
 	
 	console.log('hello!!! inside postinfo', car,colour,location,time)
 	return function (dispatch) {
-console.log('yo')
+
 		axios.post('api/carInput', {
-		car: car,
-		colour: colour,
-		location: location,
-		time: time
+			car: car,
+			colour: colour,
+			location: location,
+			time: time
 		})
 		.then(response => {
 		console.log('postInfo response',response.data)
@@ -30,6 +30,24 @@ console.log('yo')
 	}
 }
 
+export function textInfo (car,colour,location,time) {
+
+	return function (dispatch) {
+
+		axios.post('/api/textInfo', {
+			car: car,
+			colour: colour,
+			location: location,
+			time: time
+		})
+		.then (response => {
+			console.log('textInfo response', response.data)
+		})
+		.catch (response => {
+			console.error('error in textInfo response',response)
+		})
+	}
+}
 
 
 

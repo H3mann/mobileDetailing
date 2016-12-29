@@ -22,8 +22,6 @@ export function login(name, pass) {
 						inputData: res.data
 					})
 					browserHistory.push('/')
-
-					
 				}
 			})
 			.catch(res => console.log('err in getting userinput', res));

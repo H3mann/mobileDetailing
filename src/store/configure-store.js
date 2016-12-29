@@ -7,7 +7,8 @@ import rootReducer from '../reducers/index';
 
  const defaultState = {
  	
- 	auth
+ 	auth,
+ 	carInfo
  	
  }
  

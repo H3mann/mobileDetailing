@@ -1,14 +1,18 @@
 
 
 
-const authReducer = (state = [] ,action) => {
-
+export default function authReducer (state = {} ,action)  {
 	// let newState = JSON.parse(JSON.stringify(state))
 	// console.log('new state',newState)
 
 	switch (action.type) {
 		case 'USER_LOGIN':
-		return {...state,logged: true}
+		
+		return {...state, logged: true}
+
+		case 'GET_INPUTDATA':
+		// console.log({...state, car: action.inputData})
+		return {...state, carInfo: action.inputData}
 
 
 		case 'USER_LOGOUT':
@@ -19,17 +23,12 @@ const authReducer = (state = [] ,action) => {
 		return {...state, usernameSuccess: action.usernameSuccess}
 		
 		//same as :  state.usernameSuccess = action.usernameSuccess
-		
-
-
-		default:
-      
-      return state;
 
 	}
+	return state;
 }
 
-export default authReducer
+
 
 // const fetching = (state = { isFetching: false }, action) => {
 //   switch (action.type) {

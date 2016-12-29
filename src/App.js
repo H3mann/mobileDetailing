@@ -15,9 +15,11 @@ import Main from '../src/components/Main'
 
 
 function mapStateToProps(state) {
+	console.log(' AUTH INFO map state to props',state)
+	console.log('CAR INFO INSIDE MAP STATE TO PROPS',state.carInfo)
    return {
-     carInfo: state.carInfo,
-     auth: state.auth
+     auth: state,
+      carInfo: state.carInfo
    };
  }
  

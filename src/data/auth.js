@@ -2,7 +2,8 @@
 const auth = {
 	logged: false,
 	logSuccess: true,
-	usernameSuccess: true
+	usernameSuccess: true,
+	data: []
 }
 
 export default auth
