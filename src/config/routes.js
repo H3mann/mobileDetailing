@@ -11,6 +11,7 @@ import Auth from '../components/authorization/Auth'
 import Main from '../components/Main'
 import Signup from '../components/authorization/Signup'
 import Login from '../components/authorization/Login'
+import UserProfileContainer from '../containers/UserProfileContainer'
 
 
 var routes = (

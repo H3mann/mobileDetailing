@@ -15,12 +15,18 @@ const Main = React.createClass({
 
   render() {
     console.log('this',this.props)
-    
+
     return (
       <div>
       <div className="App">
         <div className="App-header">
           <div className='signup'>
+          {this.props.auth.logged ? <h3>Welcome!</h3> 
+            : <div><Link to={'/login'} > Login </Link>
+                    <Link to={'/signup'}> Signup </Link>
+             </div>
+             }
+
           </div>
           <img src={logo} className="App-logo" alt="logo" />
           <h2>GB Auto Detail</h2>
@@ -28,7 +34,7 @@ const Main = React.createClass({
         <p className="App-intro">
           To get started, input your info below!
         </p>
-        
+
       </div>
       <div>
         {React.cloneElement(this.props.children, this.props)}

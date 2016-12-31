@@ -8,6 +8,8 @@ import React, {PropTypes, Component} from 'react';
  // import PersonInput from './PersonInput';
  import Main from '../components/Main'
  import UserInput from '../components/UserInput'
+ import UserProfile from '../components/UserProfile'
+ import UserProfileContainer from './UserProfileContainer'
 
 const UserInputContainer = React.createClass({
   getInitialState () {
@@ -71,6 +73,9 @@ location={this.state.location}
 time={this.state.time}
 submit={this.handleSubmit} />
 
+<div>
+{this.props.auth.logged ? <UserProfileContainer {...this.props} /> : <h3>login to see your profile here</h3> }
+</div>
 </div>
 
 )
