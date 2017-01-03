@@ -1,5 +1,5 @@
 
-##h3 A web app designed for GB Auto Detail - A mobile car wash/detailing company   
+### A web app designed for GB Auto Detail - A mobile car wash/detailing company   
 
 A web application built with React/Redux/Neo4j that allows users to submit info regarding when and where they want their car to be washed/detailed.
 
