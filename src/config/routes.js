@@ -21,11 +21,10 @@ var routes = (
 		<IndexRoute component={UserInputContainer} />
 		
 		<Route path='/input' component={UserInputContainer} />
-		<Route path='/signup1' component={Signup} />
+		<Route path='/signup' component={Signup} />
 		<Route path='/login' component={Login} />
 		
 		</Route>
-		
 
 	</Router>
 </Provider>

@@ -3,7 +3,8 @@ const carInfo = {
 	car: 'info',
 	colour: 'red',
 	location: 'Toronto',
-	time: '5pm'
+	time: '5pm',
+	date: 'jan 1'
 
 
 }

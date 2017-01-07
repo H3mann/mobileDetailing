@@ -14,9 +14,7 @@ const Auth = React.createClass({
   render() {
     return (
       <div className='auth noSelect'>
-
           <Signup signup={this.props.signup} logSuccess={this.props.auth.usernameSuccess} userReset={this.props.userReset}/>
-
       </div>
     )
   }

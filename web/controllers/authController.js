@@ -12,13 +12,14 @@ exports.createUser = function(req, res){
     params: { username }
   }, function(err, result) {
     if(err) console.log('err', err);
-    if(result.length === 0) {
+    if(result !== 'hi') {
       bcrypt.hash(password, null, null, function(err, hash) {
         db.cypher({
           query: 'CREATE (a:User { username: {username}, password: {hash} })',
           params: { username, hash }
         }, function(err, result) {
           if(err) console.log('err', err);
+          console.log('result in create usr', result)
           req.session.regenerate(function(){
             req.session.user = req.body.username;
             res.sendStatus(201);

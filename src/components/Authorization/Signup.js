@@ -11,7 +11,7 @@ const Signup = React.createClass ({
 			pass2: '',
 			clicked: false
     }
-		
+
 	},
 
 	componentWillMount() {
@@ -66,19 +66,21 @@ const Signup = React.createClass ({
   handleSubmit(e) {
     e.preventDefault();
     this.props.signup(this.state.name, this.state.pass);
+    console.log('XXXXXX')
   },
 
 
 	render() {
     return (
+      <div>
+        <PageHeader>
+          <Col className='signupTitle'>
+           <small>need an account?</small> Sign Up
+          </Col>
+        </PageHeader>
   <div className='landingPage'>
       <Form horizontal>
 
-        <PageHeader>
-          <Col smOffset={2} className='loginTitle'>
-            Sign Up <small>need an account?</small>
-          </Col>
-        </PageHeader>
 
         <FormGroup
           controlId="usernameTaken"
@@ -143,13 +145,14 @@ const Signup = React.createClass ({
 
         <FormGroup>
           <Col smOffset={2} sm={10}>
-            <Button disabled={this.allValid()} type="submit" onClick={this.handleSubmit}>
+            <Button type="submit" onClick={this.handleSubmit}>
               Sign Up
             </Button>
           </Col>
         </FormGroup>
 
       </Form>
+  </div>
   </div>
     )
   }

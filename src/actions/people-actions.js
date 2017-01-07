@@ -1,25 +1,18 @@
 import * as types from './action-types';
- 
- // export const addPerson = (person) => {
- //   return {
- //     type: types.ADD_PERSON,
- //     person
- //   };
- // }
-
- import axios from 'axios';
+import axios from 'axios';
 import { browserHistory } from 'react-router';
 
-export function postInfo(car,colour,location,time) {
+export function postInfo(car,colour,location,time,date) {
 	
-	console.log('hello!!! inside postinfo', car,colour,location,time)
+	console.log('hello!!! inside postinfo', car,colour,location,time,date)
 	return function (dispatch) {
 
 		axios.post('api/carInput', {
 			car: car,
 			colour: colour,
 			location: location,
-			time: time
+			time: time,
+			date: date
 		})
 		.then(response => {
 		console.log('postInfo response',response.data)
@@ -30,7 +23,7 @@ export function postInfo(car,colour,location,time) {
 	}
 }
 
-export function textInfo (car,colour,location,time) {
+export function textInfo (car,colour,location,time,date) {
 
 	return function (dispatch) {
 
@@ -38,7 +31,8 @@ export function textInfo (car,colour,location,time) {
 			car: car,
 			colour: colour,
 			location: location,
-			time: time
+			time: time,
+			date: date
 		})
 		.then (response => {
 			console.log('textInfo response', response.data)

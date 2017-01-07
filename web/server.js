@@ -21,18 +21,7 @@ app.use('/api',router)
 
 
 console.log('here')
-// app.post('/carInput',function (req,res)  {
-//    console.log('inside app.get!!*',req)
 
-//    // var reqURL = 'https://www.reddit.com/r/' + req.query.queryData + '.json'
-//    // var options = { method: 'GET', uri: reqURL};
-
-//   // request(options, (error, response, body) => {
-//   //      if (error) throw new Error(error);
-//   //      res.send(body);
-//   // });
-
-// })
 
 app.use("*", express.static(__dirname + "/../src/"))
 

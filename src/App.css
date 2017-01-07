@@ -1,24 +1,146 @@
+ 
 .App {
   text-align: center;
+
+background: #6190E8; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #6190E8 , #A7BFE8); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #6190E8 , #A7BFE8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+
+
+
 }
+
+/*.below {color: #ccc}*/
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 50px;
+  margin-top: 60px;
+  margin-left: -90px;
 }
 
 .App-header {
   background-color: #222;
+
+
   height: 150px;
   padding: 19px;
-  color: white;
+
 }
 
-.App-intro {
+/*.App-intro {
   font-size: large;
-}
+  font-family: 'Raleway';
+}*/
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.authLinks {
+  font-size: 20px;
+  font-family: 'Raleway';
+  font-weight: bold;
+  
+  text-shadow: -0.08em -0.08em 0.005em rgba(0, 0, 0, 0.90);
+}
+
+.title {
+  font-size: 30px;
+  font-family: 'Raleway';
+  color: #ccc;
+}
+
+.signupTitle {
+  margin-top: 130px;
+  margin-right: 500px;
+  
+}
+
+.welcome {
+  font-size: 25px;
+  font-family: 'Raleway';
+}
+
+.lastWash {
+  font-size: 25px;
+  font-family: 'Raleway';
+}
+
+.profileBlurb {
+  font-size: 25px;
+  font-family: 'Raleway';
+  height: 350px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 5px 5px;
+  width: 450px;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.userProfile {
+font-size: 25px;
+  font-family: 'Raleway';
+  height: 650px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 5px 5px;
+  width: 450px;
+  margin-left: 70px;
+  margin-top: 30px;
+
+}
+
+h1 {
+    font: 600 1.5em/1 'Raleway', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    position: absolute;
+    top: 1%;
+    width: 100%;
+}
+
+.landingPage {
+  margin-top: 20px;
+}
+
+a {
+  color: #ccc;
+}
+
+/*a:active {
+    color: yellow;
+}*/
+
+/*span, span:after {
+    font-weight: 900;
+    color: #efedce;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    letter-spacing: .1em;
+    padding: .2em 0 .25em 0;
+}
+
+span {
+    font-size: 2em;
+    z-index: 100;
+    text-shadow: .04em .04em 0 #9cb8b3;
+}*/
+
+/*span:after {
+    content: attr(data-shadow-text);
+    color: rgba(0,0,0,.35);
+    text-shadow: none;
+    position: absolute;
+    left: .0875em;
+    top: .0875em;
+    z-index: -1;
+    -webkit-mask-image: url(http://f.cl.ly/items/1t1C0W3y040g1J172r3h/mask.png);
+}*/
+

@@ -11,10 +11,10 @@ export function login(name, pass) {
 		.then(response => {
 			dispatch({type: "USER_LOGIN"});
 			console.log("userInput request")
-			axios.get('/api/inputData', {})
+			axios.get('/api/inputData',{})
 			.then(res => {
 				console.log('inside get request',res.data)
-				if(res.data === '[]') {
+				if(res.data === []) {
 					browserHistory.push('/')
 				} else {
 					dispatch({
@@ -27,8 +27,8 @@ export function login(name, pass) {
 			.catch(res => console.log('err in getting userinput', res));
 		})
 		.catch(response => {
-			dispatch({type:"LOG_SUCCESS", logSuccess: false});
 			console.log('error in signinUser action creator: ',response);
+			dispatch({type:"LOG_SUCCESS", logSuccess: false});
 		});
 	}
 }
@@ -43,14 +43,14 @@ export function signup(name, pass) {
 			password: pass
 		})
 		.then(function(response) {
-			dispatch({type: "USER_LOGIN"});
-			console.log('about to push to main page')
-			browserHistory.push('/');
+			dispatch({type: "USER_LOGIN"})
+			browserHistory.push('/')
+			console.log('we go make it')
 
 		})
 		.catch(function(response) {
-			dispatch({type: "USERNAME_SUCCESS", usernameSuccess: false});
 			console.log('error in signupUser action creator: ', response);
+			dispatch({type: "USERNAME_SUCCESS", usernameSuccess: false});
 		});
 	}
 }
