@@ -50,7 +50,7 @@ exports.checkPassword = function(req, res){
   }, function(err, result) {
     if(err) console.log(err);
     if(result[0]) {
-      let user = result[0].a;
+      var user = result[0].a;
       console.log('USER!!!!',user)
       bcrypt.compare(req.body.password, user.properties.password, function(err, result){
         if(result) 

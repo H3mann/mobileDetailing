@@ -1,3 +1,9 @@
+
+function test(){
+    "use strict";
+    let a = 1;
+} 
+
 var bodyParser = require('body-parser');
 var cors = require("cors");
 var express = require('express');
