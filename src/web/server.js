@@ -31,11 +31,9 @@ app.use('/api',router)
 
 console.log('here')
 
- app.use(express.static('./build'));
+app.use("*", express.static(__dirname + "/../build/"));
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, './build', 'index.html'));
-});
+
 
 app.listen(3001, function(err) {
   if (err) console.log(err);
