@@ -9,6 +9,7 @@ var cors = require("cors");
 var express = require('express');
 var router = require('./router.js');
 var authRouter = require('./authRouter.js')
+var path = require('path')
 
 var session = require('express-session');
 
@@ -30,12 +31,11 @@ app.use('/api',router)
 
 console.log('here')
 
- app.use(express.static('./src'));
+ app.use(express.static('./build'));
 
-
-+app.get('/*', function (req, res) {
-   res.sendFile(path.join(__dirname, './src', 'index.html'));
- });
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, './build', 'index.html'));
+});
 
 app.listen(3001, function(err) {
   if (err) console.log(err);
