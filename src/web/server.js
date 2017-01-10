@@ -14,6 +14,8 @@ var session = require('express-session');
 
 var app = express()
 
+
+
 app.use(cors())
 app.use(bodyParser())
 
@@ -28,8 +30,12 @@ app.use('/api',router)
 
 console.log('here')
 
+ app.use(express.static('./build'));
 
-app.use("*", express.static(__dirname + "/../src/"))
+
++app.get('/*', function (req, res) {
+   res.sendFile(path.join(__dirname, './build', 'index.html'));
+ });
 
 app.listen(3001, function(err) {
   if (err) console.log(err);
