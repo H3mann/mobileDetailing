@@ -30,11 +30,11 @@ app.use('/api',router)
 
 console.log('here')
 
- app.use(express.static('./build'));
+ app.use(express.static('./src'));
 
 
 +app.get('/*', function (req, res) {
-   res.sendFile(path.join(__dirname, './build', 'index.html'));
+   res.sendFile(path.join(__dirname, './src', 'index.html'));
  });
 
 app.listen(3001, function(err) {
