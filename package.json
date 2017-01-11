@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://gbautodetail.surge.sh",
+  
   "devDependencies": {
     "concurrently": "^3.1.0",
     "react-scripts": "0.8.3"

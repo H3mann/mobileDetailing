@@ -4,7 +4,7 @@ import { browserHistory } from 'react-router';
 export function login(name, pass) {
 	console.log("login", name, pass)
 	return function(dispatch) {
-		axios.post('/login', {
+		axios.post('/login/', {
 			username: name,
 			password: pass
 		})
